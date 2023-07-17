@@ -8,32 +8,58 @@
     <style>
       .banner-img {
         width: 100%;
-        object-fit: cover;
         height: 200px; /* Adjust the height value as per your preference */
+        object-fit: cover;
         margin-top: 20px; /* Adjust the spacing value as per your preference */
+      }
+      .about-heighter {
+        margin-top: 40px; /* Adjust the top margin as per your preference */
+        margin-bottom: 40px; /* Adjust the bottom margin as per your preference */
+      }
+      .contact-btn-container {
+        margin: 20px 0; /* Adjust the top and bottom margin as per your preference */
+      }
+      .opportunities-container {
+        margin-top: 40px; /* Adjust the top margin as per your preference */
+        margin-bottom: 40px; /* Adjust the bottom margin as per your preference */
       }
     </style>
   </head>
   
   <body>
-    {%include 'nav.html'%}
+    {% include 'nav.html' %}
+    
     <div class="container">
       <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
       <img class="banner-img" src="https://heighter-career-website--abdullah-22.repl.co/static/banner.jpeg">
-      <h2 class="text-center mt-2 mb-4">About Heighter</h2>
-      <p class="lead">Welcome, we have just started our company and we are looking for some associates. You can join our startup by just clicking on the desired job designation, and then we will give you the interview date :)</p>  
-      <h3 class="text-center mt-2 mb-4">Opportunities</h3>
 
-      <div>
-        {% for job in jobs %}
-          {% include 'job.html' %}
-        {% endfor %}
+      <div class="about-heighter">
+        <h2 class="text-center mt-2 mb-4">About Heighter</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <p class="lead text-left">Welcome, we have just started our company and we are looking for some associates. You can join our startup by just clicking on the desired job designation, and then we will give you the interview date :). If you are curious about what we actually do in Heighter, you must visit our LinkedIn to explore our work highlights and company culture. At Heighter, our work culture is focused on resolving each other's problems and fostering a collaborative environment for learning and growth within our team.</p>
+          </div>
+          <div class="col-md-6">
+            <img class="img-fluid rounded border" src="/static/ppl-working.jpeg">
+          </div>
+        </div>
       </div>
 
-      <div class="text-center">
-        <button class="btn btn-primary btn-lg text-center" id="contact-btn">Contact Us</button>
-        <p class="mt-4">Copyright 2023, Heighter</p>
+      <div class="opportunities-container">
+        <h3 class="text-center mt-2 mb-4">Opportunities</h3>
+
+        <div>
+          {% for job in jobs %}
+            {% include 'job.html' %}
+          {% endfor %}
+        </div>
       </div>
+
+      <div class="text-center contact-btn-container">
+        <button class="btn btn-primary btn-lg" id="contact-btn">Contact Us</button>
+      </div>
+
+      {% include 'footer.html' %}
     </div>
   </body>
 </html>
