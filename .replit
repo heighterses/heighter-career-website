@@ -1,4 +1,4 @@
-run = "python app.py"
+ run = "python app.py"
 
 # The primary language of the repl. There can be others, though!
 language = "python3"
