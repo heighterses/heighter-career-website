@@ -1,0 +1,33 @@
+<h5>Application Form</h5>
+
+<form action="/job/{{job['id']}}/apply" method="post">
+  <div class="mb-1">
+    <label class="form-label">Full Name</label><br>
+    
+    <input type="text" name="full_name" class="form-input" placeholder="Abdullah Aftab">
+  </div>
+  
+  <div class="mb-1">
+    <label class="form-label">E-mail</label><br>
+    <input type="text" name="email" class="form-input" placeholder="abdullah.work@gmail.com">
+  </div>
+  
+  <div class="mb-1">
+    <label class="form-label">Linkedin URL</label><br>
+    <input type="text" name="linkedin_url" class="form-input" placeholder="https://linkedin.com/in/-abdullah-aftab------
+      if you don't have Linkedin then you can share your resume link/url">
+  </div>
+
+  <div>
+      <label>Education</label><br>
+      <textarea name="education"></textarea>
+    </div>
+
+  <div>
+      <label>Prior Work Experience</label><br>
+      <textarea name="experience"></textarea>
+    </div>
+    
+  
+  <input type="submit">
+</form>
